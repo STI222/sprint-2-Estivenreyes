@@ -39,14 +39,14 @@ function draw() {
             circle(posX, posY, radius);
             text(e, posX, posY + textDistance);
 
-            circle(posX + calculatePosition(comparar(Mejia, Joseph)), posY + 100, radius);
-            text("Joseph", posX + calculatePosition(comparar(Mejia, Joseph)), posY + 100 + textDistance);
+            circle(posX + comparar(Mejia, Joseph), posY + 100, radius);
+            text("Joseph", posX + comparar(Mejia, Joseph), posY + 100 + textDistance);
 
-            circle(posX + calculatePosition(comparar(Mejia, Jhonathan)), posY + 300, radius);
-            text("Jhonathan", posX + calculatePosition(comparar(Mejia, Jhonathan)), posY + 300 + textDistance);
+            circle(posX + comparar(Mejia, Jhonathan), posY + 300, radius);
+            text("Jhonathan", posX + comparar(Mejia, Jhonathan), posY + 300 + textDistance);
 
-            circle(posX + calculatePosition(comparar(Mejia, Jolyne)), posY + 500, radius);
-            text("Jolyne", posX + calculatePosition(comparar(Mejia, Jolyne)), posY + 500 + textDistance);
+            circle(posX + comparar(Mejia, Jolyne), posY + 500, radius);
+            text("Jolyne", posX + comparar(Mejia, Jolyne), posY + 500 + textDistance);
             color(0);
 
             break;
@@ -55,14 +55,14 @@ function draw() {
             circle(posX, posY, radius);
             text(e, posX, posY + textDistance);
 
-            circle(posX + calculatePosition(comparar(Joseph, Mejia)), posY + 100, radius);
-            text("Mejia", posX + calculatePosition(comparar(Joseph, Mejia)), posY + 100 + textDistance);
+            circle(posX + comparar(Joseph, Mejia), posY + 100, radius);
+            text("Mejia", posX + comparar(Joseph, Mejia), posY + 100 + textDistance);
 
-            circle(posX + calculatePosition(comparar(Joseph, Jhonathan)), posY + 300, radius);
-            text("Jhonathan", posX + calculatePosition(comparar(Joseph, Jhonathan)), posY + 300 + textDistance);
+            circle(posX + comparar(Joseph, Jhonathan), posY + 300, radius);
+            text("Jhonathan", posX + comparar(Joseph, Jhonathan), posY + 300 + textDistance);
 
-            circle(posX + calculatePosition(comparar(Joseph, Jolyne)), posY + 500, radius);
-            text("Jolyne", posX + calculatePosition(comparar(Joseph, Jolyne)), posY + 500 + textDistance);
+            circle(posX + comparar(Joseph, Jolyne), posY + 500, radius);
+            text("Jolyne", posX + comparar(Joseph, Jolyne), posY + 500 + textDistance);
             color(0);
 
             break;
@@ -71,14 +71,14 @@ function draw() {
             circle(posX, posY, radius);
             text(e, posX, posY + textDistance);
 
-            circle(posX + calculatePosition(comparar(Jhonathan, Mejia)), posY + 100, radius);
-            text("Mejia", posX + calculatePosition(comparar(Jhonathan, Mejia)), posY + 100 + textDistance);
+            circle(posX + comparar(Jhonathan, Mejia), posY + 100, radius);
+            text("Mejia", posX + comparar(Jhonathan, Mejia), posY + 100 + textDistance);
 
-            circle(posX + calculatePosition(comparar(Jhonathan, Joseph)), posY + 300, radius);
-            text("Joseph", posX + calculatePosition(comparar(Jhonathan, Joseph)), posY + 300 + textDistance);
+            circle(posX + comparar(Jhonathan, Joseph), posY + 300, radius);
+            text("Joseph", posX + comparar(Jhonathan, Joseph), posY + 300 + textDistance);
 
-            circle(posX + calculatePosition(comparar(Jhonathan, Jolyne)), posY + 500, radius);
-            text("Jolyne", posX + calculatePosition(comparar(Jhonathan, Jolyne)), posY + 500 + textDistance);
+            circle(posX + comparar(Jhonathan, Jolyne), posY + 500, radius);
+            text("Jolyne", posX + comparar(Jhonathan, Jolyne), posY + 500 + textDistance);
             color(0);
 
             break;
@@ -87,14 +87,14 @@ function draw() {
             circle(posX, posY, radius);
             text(e, posX, posY + textDistance);
 
-            circle(posX + calculatePosition(comparar(Jolyne, Mejia)), posY + 100, radius);
-            text("Mejia", posX + calculatePosition(comparar(Jolyne, Mejia)), posY + 100 + textDistance);
+            circle(posX + comparar(Jolyne, Mejia), posY + 100, radius);
+            text("Mejia", posX + comparar(Jolyne, Mejia), posY + 100 + textDistance);
 
-            circle(posX + calculatePosition(comparar(Jolyne, Joseph)), posY + 300, radius);
-            text("Joseph", posX + calculatePosition(comparar(Jolyne, Joseph)), posY + 300 + textDistance);
+            circle(posX + comparar(Jolyne, Joseph), posY + 300, radius);
+            text("Joseph", posX + comparar(Jolyne, Joseph), posY + 300 + textDistance);
 
-            circle(posX + calculatePosition(comparar(Jolyne, Jhonathan)), posY + 500, radius);
-            text("Jhonathan", posX + calculatePosition(comparar(Jolyne, Jhonathan)), posY + 500 + textDistance);
+            circle(posX + comparar(Jolyne, Jhonathan), posY + 500, radius);
+            text("Jhonathan", posX + comparar(Jolyne, Jhonathan), posY + 500 + textDistance);
             color(0);
 
             break;
@@ -106,7 +106,8 @@ function comparar(z, y) {
     af = int(sqrt(z[1] ** 2 + z[2] ** 2 + z[3] ** 2 + z[4] ** 2));
     bf = int(sqrt(y[1] ** 2 + y[2] ** 2 + y[3] ** 2 + y[4] ** 2));
 
-    zi = ab / (af * bf);
+    zi = (ab / (af * bf)) * 200;
+    console.log(zi);
     return zi;
 }
 
@@ -115,7 +116,12 @@ function myChoiceEvent() {
     e = item;
 }
 
-function calculatePosition(zi) {
-    console.log(windowWidth * zi);
-    return windowWidth - (windowWidth - 100) * zi;
-}
+// function calculatePosition(zi) {
+//     console.log(zi);
+//     return (windowWidth - 100) * zi;
+// }
+
+//Estiven Reyes
+
+// Parte 2 del ejercicio
+// Estiven Reyes y Valentina Arango
